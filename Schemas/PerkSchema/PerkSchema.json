@@ -1,0 +1,23 @@
+[
+  {
+    "name": "PerkMetadata",
+    "key": "Perks:<AssetAddress>:<PerkName>:Metadata",
+    "keyType": "MappingWithGrouping",
+    "valueType": "string",
+    "valueContent": "JSONURL"
+  },
+  {
+    "name": "PerkRedeemedStatus",
+    "key": "Perks:<AssetAddress>:<PerkName>:Redeemed",
+    "keyType": "MappingWithGrouping",
+    "valueType": "boolean",
+    "valueContent": "Boolean"
+  },
+  {
+    "name": "PerkFulfilledStatus",
+    "key": "Perks:<AssetAddress>:<PerkName>:Fulfilled",
+    "keyType": "MappingWithGrouping",
+    "valueType": "boolean",
+    "valueContent": "Boolean"
+  }
+]

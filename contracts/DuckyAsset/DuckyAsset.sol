@@ -11,9 +11,13 @@ contract DuckyAsset is LSP8IdentifiableDigitalAsset {
     address public traitController;
 
     constructor(
-        address owner
-    ) LSP8IdentifiableDigitalAsset("DuckyNFAsset", "NFA", owner, 4) {}
-
+        string memory name,
+        string memory symbol,
+        address owner,
+        address traitControllerAddress
+    ) LSP8IdentifiableDigitalAsset(name, symbol, owner, 4) {
+        setTraitController(traitControllerAddress);
+    }
     //  Event to indicate that a refresh is required by the client or server
     event RefreshRequired(string jsonData);
 

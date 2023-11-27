@@ -6,8 +6,17 @@ import "./DuckyAsset.sol";
 contract DuckyAssetFactory {
     event AssetCreated(address indexed assetAddress);
 
-    function createDuckyAsset() public returns (address) {
-        DuckyAsset newAsset = new DuckyAsset(msg.sender);
+    function createDuckyAsset(
+        string memory name,
+        string memory symbol,
+        address traitController
+    ) public returns (address) {
+        DuckyAsset newAsset = new DuckyAsset(
+            name,
+            symbol,
+            msg.sender,
+            traitController
+        );
         emit AssetCreated(address(newAsset));
         return address(newAsset);
     }
